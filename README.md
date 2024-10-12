@@ -1,3 +1,7 @@
+Postman de prueba de cada servicio
+
+* Prueba Tecnica.postman_collection.json
+
 Instrucciones para ejecutar el proyecto localmente
 
 1. Clonar el repositorio:

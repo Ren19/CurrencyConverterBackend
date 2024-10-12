@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "90dee3a4-bb69-43a0-a1f8-3498e91b6dbe",
+		"name": "Prueba Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1764430"
+	},
+	"item": [
+		{
+			"name": "Inicio Sesion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"testuser3\",\r\n    \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"testuser3\",\r\n    \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conversion Moneda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWlzc3VlciIsInN1YiI6MSwiaWF0IjoxNzI4NzU1NTU2LCJleHAiOjE3Mjg3NTkxNTZ9.xCyfjEaYJ04nLil9YDAlz-QQ5-AFO-gjJjgBsfdj7u4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"source_currency\": \"EUR\",\r\n    \"target_currency\": \"PEN\",\r\n    \"original_amount\": 100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conversions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conversions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de Conversiones",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWlzc3VlciIsInN1YiI6MSwiaWF0IjoxNzI4NzU1NTU2LCJleHAiOjE3Mjg3NTkxNTZ9.xCyfjEaYJ04nLil9YDAlz-QQ5-AFO-gjJjgBsfdj7u4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conversions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conversions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de Logs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWlzc3VlciIsInN1YiI6MSwiaWF0IjoxNzI4NzU1NTU2LCJleHAiOjE3Mjg3NTkxNTZ9.xCyfjEaYJ04nLil9YDAlz-QQ5-AFO-gjJjgBsfdj7u4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"source_currency\": \"EUR\",\r\n    \"target_currency\": \"PEN\",\r\n    \"original_amount\": 100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/audit-log",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"audit-log"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Webhook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWlzc3VlciIsInN1YiI6MSwiaWF0IjoxNzI4NzU1NTU2LCJleHAiOjE3Mjg3NTkxNTZ9.xCyfjEaYJ04nLil9YDAlz-QQ5-AFO-gjJjgBsfdj7u4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"event\": \"exchange_rate_updated\",\r\n    \"data\": {\r\n        \"source_currency\": \"EUR\",\r\n        \"target_currency\": \"USD\",\r\n        \"new_rate\": 10.095\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/webhook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
